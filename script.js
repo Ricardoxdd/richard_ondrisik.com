@@ -28,3 +28,24 @@ class ButtonHandler {
 }
 
 new ButtonHandler('myButton', 'demo');
+
+document.getElementById('myButton').addEventListener('click', function() {
+    var text = document.getElementById('myTextField').value;
+    if(text === "I love you"){
+        document.getElementById('displayText').innerText = "I know baby i love you too <3";
+    }
+    else{
+        document.getElementById('displayText').innerText = text;
+    }
+
+
+});
+
+document.getElementById('toggleSidebar').addEventListener('click', function() {
+    var sidebar = document.getElementById('sidebar');
+    if (sidebar.style.width === '0px' || sidebar.style.width === '') {
+        sidebar.style.width = '250px';
+    } else {
+        sidebar.style.width = '0px';
+    }
+});
